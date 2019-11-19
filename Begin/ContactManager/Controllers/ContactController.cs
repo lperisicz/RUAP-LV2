@@ -5,20 +5,28 @@ using System.Web;
 using System.Web.Mvc;
 using System.Net.Http;
 using System.Web.Http;
-
+using ContactManager.Models;
 
 namespace ContactManager.Controllers
 {
     public class ContactController : ApiController
     {
         // GET: Contact
-        public string[] Get()
+        public Contact[] Get()
         {
-            return new string[]
-            {
-                "Hello",
-                "World"
-            };
+            return new Contact[]
+    {
+        new Contact
+        {
+            Id = 1,
+            Name = "Glenn Block"
+        },
+        new Contact
+        {
+            Id = 2,
+            Name = "Dan Roth"
+        }
+    };
         }
     }
 }
